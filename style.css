@@ -7,8 +7,13 @@ html,body{
     font-family: 'Barlow Semi Condensed', sans-serif;
     background: radial-gradient(134.34% 134.34% at 50% 0%, #1F3757 0%, #131537 100%);
     background-repeat: no-repeat;
-    width: 100%;
-    height: 100%;
+}
+.body{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 48px;
+    justify-content: center;
 }
 
 .score-card{
@@ -17,15 +22,12 @@ html,body{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    margin: auto;
     margin-top: 48px;
     border: 3px solid rgba(255, 255, 255, 0.289199);
     border-radius: 15px;
     gap: 384px;
 }
 .score-card > p {
-    /* width: 109px;
-    height: 108px; */
     border: 1px solid hsl(0, 0%, 100%);
     color: #FFFFFF;
     font-weight:600;
@@ -63,6 +65,64 @@ html,body{
     line-height: 64px;
     text-align: center;
     color: #565468;
+}
+.game-section{
+    width: 472px;
+    height: 463px;
+    border: 1px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.pentagon{
+    width: 328px;
+    height: 312px;
+    background:url("./images/bg-pentagon.svg");
+    transform: rotate(72deg);
+}
+.circle{
+    position: absolute;
+    width: 145px;
+    height: 148px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+#scissors{
+    background-color: #EB9F0E;
+    box-shadow:3px 0px 3px #C76C1B;
+    top: 10%;
+    left: 10%;
+}
+#spock{
+    background-color: #3FB7CD;
+    box-shadow:0 3px 3px #2D8DAB;
+    display: none;
+}
+#rock{
+    background-color: #DB2E4D;
+    box-shadow:0 3px 3px #DB2E4D;
+    display: none;
+}
+#paper{
+    background-color: #4664F4;
+    box-shadow:0 3px 3px #2A45C2;
+    display: none;
+}
+#lizard{
+    background-color: #834EE3;
+    box-shadow:0 3px 3px #5F37A8;
+    display: none;
+}
+.inner-circle{
+    width: 111.31px;
+    height: 110.82px;
+    border-radius: 50%;
+    background-color:#DADADA;
+    box-shadow:inset 3px 0px 3px rgb(254, 243, 243);
 }
 
 .attribution { font-size: 11px; text-align: center; }
