@@ -12,7 +12,6 @@ html,body{
     display: flex;
     align-items: center;
     flex-direction: column;
-    row-gap: 48px;
     justify-content: center;
 }
 
@@ -25,6 +24,7 @@ html,body{
     margin-top: 48px;
     border: 3px solid rgba(255, 255, 255, 0.289199);
     border-radius: 15px;
+    margin-bottom: 48px;
     gap: 384px;
 }
 .score-card > p {
@@ -73,13 +73,13 @@ html,body{
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
 }
 .pentagon{
+    position: relative;
     width: 328px;
     height: 312px;
     background:url("./images/bg-pentagon.svg");
-    transform: rotate(72deg);
+    border: 1px solid white;
 }
 .circle{
     position: absolute;
@@ -93,36 +93,104 @@ html,body{
 }
 #scissors{
     background-color: #EB9F0E;
-    box-shadow:3px 0px 3px #C76C1B;
-    top: 10%;
-    left: 10%;
+    box-shadow:0px 3px 3px #C76C1B;
+    top: -24%;
+    left: 29%;
 }
 #spock{
     background-color: #3FB7CD;
     box-shadow:0 3px 3px #2D8DAB;
-    display: none;
+    top: 10.5%;
+    left: -24%;
 }
 #rock{
     background-color: #DB2E4D;
     box-shadow:0 3px 3px #DB2E4D;
-    display: none;
+    bottom: -24%;
+    right: -1%;
 }
 #paper{
     background-color: #4664F4;
     box-shadow:0 3px 3px #2A45C2;
-    display: none;
+    top: 10.5%;
+    right: -24%;
 }
 #lizard{
     background-color: #834EE3;
     box-shadow:0 3px 3px #5F37A8;
-    display: none;
+    bottom: -24%;
+    left: -1%;
 }
 .inner-circle{
     width: 111.31px;
     height: 110.82px;
     border-radius: 50%;
     background-color:#DADADA;
-    box-shadow:inset 3px 0px 3px rgb(254, 243, 243);
+    box-shadow:inset 0 3px 3px rgb(254, 243, 243);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rules-btn{
+    width: 128px;
+    height: 40px;
+    border: 1px solid #FFFFFF;
+    border-radius: 8px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    letter-spacing: 2.5px;
+    color: #FFFFFF;
+    background-color: transparent;
+    align-self: flex-end;
+    margin-right: 32px;
+    cursor: pointer;
+}
+
+@media   screen and (max-width : 375px){
+    .score-card{
+        width: 311px;
+        height: 96px;
+        gap: 146px;
+        margin-top: 32px;
+        margin-bottom: 95px;
+    }
+    .score-card > p{
+        width: 49px;
+        height: 48px;
+        margin-left: 24px;
+        font-size: 13px;
+        line-height: 11px;
+    }
+    .score-box{
+        width: 80px;
+        height: 72px;
+        border-radius: 4px;
+        margin-right: 12px;
+    }
+    .score-box > p{
+        font-style: normal;
+        font-weight: 600;
+        font-size: 10px;
+        line-height: 12px;
+        text-align: center;
+        letter-spacing: 1.5625px;
+    }
+    .score-box > h3{
+        font-style: normal;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 40px;
+        text-align: center;
+        color: #565468;
+    }
+    .rules-btn{
+        align-self: center;
+        margin-top: 126px;
+    }
 }
 
 .attribution { font-size: 11px; text-align: center; }
