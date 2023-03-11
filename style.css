@@ -13,6 +13,7 @@ html,body{
     align-items: center;
     flex-direction: column;
     justify-content: center;
+    position: relative;
 }
 
 .score-card{
@@ -73,7 +74,6 @@ html,body{
     display: flex;
     align-items: center;
     justify-content: center;
-    display: none;
 }
 .pentagon{
     position: relative;
@@ -92,7 +92,7 @@ html,body{
     justify-content: center;
     cursor: pointer;
 }
-.circle:hover::before{
+.circle:hover::before,.circle:focus::before{
     width: 197px;
     height: 200px;
     position: absolute;
@@ -161,7 +161,59 @@ html,body{
     margin-right: 32px;
     cursor: pointer;
 }
-
+.rules{
+    width: 100%;
+    height: 100%;
+    border: 1px solid yellow;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.hide{
+    display: none;
+}
+.rules-container{
+    width: 400px ;
+    height: 461px;
+    border: 1px solid blue;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 20px;
+    background: #FFFFFF;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.196706);
+    border-radius: 8px;
+    padding: 32px;
+}
+.rules-container > header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 232px;
+}
+.body-opacity{
+    
+}
+header > h3 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 32px;
+    color: #3B4262;
+    text-transform: uppercase;
+}
+header > button{
+    border: none;
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+}
+.rules-container > img{
+    width: 336px ;
+    height: 330px;
+}
 .pre-step-2{
     margin-top: 72px;
     border: 1px solid white;
@@ -225,6 +277,22 @@ html,body{
 .pre-step-2-circle-scissors{
     background-color: #EB9F0E;
     box-shadow:0px 8px 3px #C76C1B;
+}
+.pre-step-2-circle-rock{
+    background-color: #DB2E4D;
+    box-shadow:0 3px 3px #DB2E4D;
+}
+.pre-step-2-circle-paper{
+    background-color: #4664F4;
+    box-shadow:0 3px 3px #2A45C2;
+}
+.pre-step-2-circle-spock{
+    background-color: #3FB7CD;
+    box-shadow:0 3px 3px #2D8DAB;
+}
+.pre-step-2-circle-lizard{
+    background-color: #834EE3;
+    box-shadow:0 3px 3px #5F37A8;
 }
 
 @media   screen and (max-width : 375px){
