@@ -160,6 +160,7 @@ html,body{
     align-self: flex-end;
     margin-right: 32px;
     cursor: pointer;
+    margin-top: 17px;
 }
 .rules{
     width: 100%;
@@ -169,7 +170,7 @@ html,body{
     align-items: center;
     justify-content: center;
     position: absolute;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.5);
 }
 .hide{
     display: none;
@@ -193,9 +194,7 @@ html,body{
     justify-content: space-between;
     column-gap: 232px;
 }
-.body-opacity{
-    
-}
+
 header > h3 {
     font-style: normal;
     font-weight: 700;
@@ -215,7 +214,7 @@ header > button{
     height: 330px;
 }
 .pre-step-2{
-    margin-top: 72px;
+    /* margin-top: 72px; */
     border: 1px solid white;
     display: flex;
     align-items: center;
@@ -227,6 +226,7 @@ header > button{
     align-items: center;
     flex-direction: row;
     column-gap: 181px;
+    justify-content: center;
 }
 .pre-step-2-text > h3{
     font-style: normal;
@@ -235,6 +235,7 @@ header > button{
     line-height: 32px;
     letter-spacing: 3px;
     color: #FFFFFF;
+    text-transform: uppercase;
     text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.196706);
 }
 .pre-step-2-choices{
@@ -280,19 +281,19 @@ header > button{
 }
 .pre-step-2-circle-rock{
     background-color: #DB2E4D;
-    box-shadow:0 3px 3px #DB2E4D;
+    box-shadow:0 8px 3px #DB2E4D;
 }
 .pre-step-2-circle-paper{
     background-color: #4664F4;
-    box-shadow:0 3px 3px #2A45C2;
+    box-shadow:0 8px 3px #2A45C2;
 }
 .pre-step-2-circle-spock{
     background-color: #3FB7CD;
-    box-shadow:0 3px 3px #2D8DAB;
+    box-shadow:0 8px 3px #2D8DAB;
 }
 .pre-step-2-circle-lizard{
     background-color: #834EE3;
-    box-shadow:0 3px 3px #5F37A8;
+    box-shadow:0 8px 3px #5F37A8;
 }
 
 @media   screen and (max-width : 375px){
@@ -301,7 +302,7 @@ header > button{
         height: 96px;
         gap: 146px;
         margin-top: 32px;
-        margin-bottom: 95px;
+        margin-bottom: 99px;
     }
     .score-card > p{
         width: 49px;
@@ -360,6 +361,81 @@ header > button{
     .circle:hover::before{
         width:110px;
         height: 109px;
+    }
+    .pre-step-2{
+        flex-direction: column-reverse;
+        row-gap: 29px;
+    }
+    .computer{
+        width: 110px;
+        height: 110px;
+    }
+    .pre-step-2-choices{
+        column-gap: 67px;
+    }
+    .pre-step-2-text{
+        column-gap: 100px;
+    }
+    .pre-step-2-text > h3{
+        font-style: normal;
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 32px;
+        text-align: center;
+        letter-spacing: 1.875px;
+        color: #FFFFFF;
+        text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.196706);
+        text-transform: uppercase;
+    }
+    .pre-step-2-circle{
+        width:130px; 
+        height:133px;
+    }
+    .pre-step-2-inner-circle{
+        width: 100px;
+        height: 100px;
+    }
+    .pre-step-2-inner-circle > img{
+        width: 63px;
+        height: 63px;
+    }
+    .pre-step-2-circle-lizard{
+        box-shadow:0px 4px 3px #5F37A8;
+    }
+    .pre-step-2-circle-paper{
+        box-shadow:0px 4px 3px #2A45C2;
+    }
+    .pre-step-2-circle-rock{
+        box-shadow:0px 4px 3px #DB2E4D;
+    }
+    .pre-step-2-circle-scissors{
+        box-shadow:0px 4px 3px #C76C1B;
+    }
+    .pre-step-2-circle-spock{
+        box-shadow:0px 4px 3px #2D8DAB;
+    }
+    .rules-container{
+        width: 375px;
+        height: 750px;
+        position: relative;
+    }
+    .rules-container > img{
+        width: 311px ;
+        height: 305px;
+    }
+    header{
+    }
+    header > button{
+        position: absolute;
+        bottom: 65px;
+        left: 178px;
+    }
+    header > h3{
+        margin-top: 95px;
+        margin-bottom: 96px;
+    }
+    .rules-btn{
+        margin-top: 245px;
     }
 }
 
