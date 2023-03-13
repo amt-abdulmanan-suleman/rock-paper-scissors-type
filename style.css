@@ -423,8 +423,6 @@ header > button{
         width: 311px ;
         height: 305px;
     }
-    header{
-    }
     header > button{
         position: absolute;
         bottom: 65px;
