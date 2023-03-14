@@ -214,21 +214,21 @@ header > button{
     height: 330px;
 }
 .pre-step-2{
-    /* margin-top: 72px; */
     border: 1px solid white;
     display: flex;
     align-items: center;
+    column-gap: 72px;
+    max-width: 1000px;
+}
+.picks{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
     row-gap: 97px;
 }
-.pre-step-2-text{
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    column-gap: 181px;
-    justify-content: center;
-}
-.pre-step-2-text > h3{
+
+.picks > h3{
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
@@ -237,14 +237,7 @@ header > button{
     color: #FFFFFF;
     text-transform: uppercase;
     text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.196706);
-}
-.pre-step-2-choices{
-    max-width: 1000px;
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    column-gap: 106px;
-}
+} 
 .pre-step-2-circle{
     width: 293px;
     height: 300px;
@@ -363,8 +356,7 @@ header > button{
         height: 109px;
     }
     .pre-step-2{
-        flex-direction: column-reverse;
-        row-gap: 29px;
+        column-gap: 67px;
     }
     .computer{
         width: 110px;
@@ -373,10 +365,14 @@ header > button{
     .pre-step-2-choices{
         column-gap: 67px;
     }
-    .pre-step-2-text{
-        column-gap: 100px;
+    .picks{
+        row-gap: 28px;
+        flex-direction: column-reverse;
     }
-    .pre-step-2-text > h3{
+    .picks-2{
+        row-gap: 17px;
+    }
+    .picks > h3{
         font-style: normal;
         font-weight: 700;
         font-size: 15px;
@@ -436,6 +432,8 @@ header > button{
         margin-top: 245px;
     }
 }
-
+.hide{
+    display: none;
+}
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }

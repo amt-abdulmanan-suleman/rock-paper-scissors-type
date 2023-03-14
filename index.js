@@ -3,6 +3,9 @@ const closeBtn = document.querySelector(".close-btn");
 const rulesModal = document.querySelector('.rules');
 const choices = document.querySelectorAll('.circle');
 const computerDivs = document.querySelectorAll('.computer')
+const gameSection = document.querySelector('.game-section')
+const result = document.querySelector(".pre-step-2")
+const picks = document.querySelectorAll('.picks')
 
 const WAR = [
     {
@@ -62,6 +65,8 @@ function displayResult(results){
           </div>`
         },index*1000)
     })
+    gameSection.classList.toggle("hide");
+    result.classList.toggle("hide")
 }
 
 // function displayResult(results){
