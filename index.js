@@ -5,7 +5,9 @@ const choices = document.querySelectorAll('.circle');
 const computerDivs = document.querySelectorAll('.computer')
 const gameSection = document.querySelector('.game-section')
 const result = document.querySelector(".pre-step-2")
-const picks = document.querySelectorAll('.picks')
+const picks = document.querySelectorAll('.picks');
+const resultText = document.querySelector('.result-text')
+const showResult = document.querySelector('.result')
 
 const WAR = [
     {
@@ -49,6 +51,7 @@ function move(choices){
     const aiChoose = aiChoice();
     console.log(choices,aiChoose)
     displayResult([choices,aiChoose]);
+    winnerOrLoser([choices,aiChoose])
 }
 
 function aiChoice(){
@@ -67,4 +70,23 @@ function displayResult(results){
     })
     gameSection.classList.toggle("hide");
     result.classList.toggle("hide");
+}
+function winnerOrLoser(results){
+    setTimeout(()=>{
+        const userWinner = isWinner(results);
+        const aiWinner = isWinner(results.reverse());
+        if(userWinner){
+            resultText.innerHTML = 'You Win'
+        }else if(aiWinner){
+            resultText.innerHTML = 'You Lose'
+        }else{
+            resultText.innerHTML = 'Draw'
+        }
+        showResult.classList.toggle('hide')
+    },1000);
+    
+}
+
+function isWinner(results){
+    return results[0].beats.includes(results[1].name)
 }
