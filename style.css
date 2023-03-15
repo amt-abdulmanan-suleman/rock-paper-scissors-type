@@ -117,7 +117,7 @@ html,body{
 }
 #rock{
     background-color: #DB2E4D;
-    box-shadow:0 3px 3px #DB2E4D;
+    box-shadow:0 3px 3px #9D1634;
     bottom: -24%;
     right: -1%;
 }
@@ -228,6 +228,7 @@ header > button{
     row-gap: 97px;
 }
 
+
 .picks > h3{
     font-style: normal;
     font-weight: 700;
@@ -238,6 +239,40 @@ header > button{
     text-transform: uppercase;
     text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.196706);
 } 
+
+.result{
+    width: 220px;
+    height: 131px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 16px;
+}
+.result .result-text{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 67px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.196706);
+
+}
+.result-btn{
+    width: 220px;
+    height: 48px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 2.5px;
+    background: linear-gradient(0deg, #F3F3F3 0%, #FFFFFF 100%);
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.196706);
+    border-radius: 8px;    
+    color: #3B4262;
+}
 .pre-step-2-circle{
     width: 293px;
     height: 300px;
@@ -274,7 +309,7 @@ header > button{
 }
 .pre-step-2-circle-rock{
     background-color: #DB2E4D;
-    box-shadow:0 8px 3px #DB2E4D;
+    box-shadow:0 8px 3px #9D1634;
 }
 .pre-step-2-circle-paper{
     background-color: #4664F4;
@@ -355,9 +390,28 @@ header > button{
         width:110px;
         height: 109px;
     }
-    .pre-step-2{
+    /* .pre-step-2{
         column-gap: 67px;
+    } */
+    .pre-step-2 {
+        display: grid;
+        grid-template-columns: (repeat(2, 1fr));
+        grid-template-areas:
+        "picks-1 picks-2"
+        "result result";
+        place-items: center;
+        grid-gap: 10px;
     }
+    .picks-1{
+        grid-area: picks-1;
+    }
+    .picks-2{
+        grid-area: picks-2;
+    }
+    .result{
+        grid-area: result;
+    }
+      
     .computer{
         width: 110px;
         height: 110px;
@@ -368,9 +422,6 @@ header > button{
     .picks{
         row-gap: 28px;
         flex-direction: column-reverse;
-    }
-    .picks-2{
-        row-gap: 17px;
     }
     .picks > h3{
         font-style: normal;
@@ -402,7 +453,7 @@ header > button{
         box-shadow:0px 4px 3px #2A45C2;
     }
     .pre-step-2-circle-rock{
-        box-shadow:0px 4px 3px #DB2E4D;
+        box-shadow:0px 4px 3px #9D1634;
     }
     .pre-step-2-circle-scissors{
         box-shadow:0px 4px 3px #C76C1B;
