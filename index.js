@@ -66,13 +66,5 @@ function displayResult(results){
         },index*1000)
     })
     gameSection.classList.toggle("hide");
-    result.classList.toggle("hide")
+    result.classList.toggle("hide");
 }
-
-// function displayResult(results){
-//     results.forEach((result,index)=>{
-//         setTimeout(()=>{
-
-//         },index*1000)
-//     })
-// }
