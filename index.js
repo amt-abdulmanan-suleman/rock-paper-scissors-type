@@ -68,12 +68,12 @@ function aiChoice(){
 
 function displayResult(results){
     computerDivs.forEach((computerDiv,index)=>{
-        setTimeout(()=>{
+        // setTimeout(()=>{
             computerDiv.classList.remove('computer')
             computerDiv.innerHTML = `<div class="pre-step-2-circle pre-step-2-circle-${results[index].name}">
             <div class="pre-step-2-inner-circle"><img src="./images/icon-${results[index].name}.svg" alt="${results[index].name}" ></div>
           </div>`
-        },index*1000)
+        // },index*1000)
     })
     gameSection.classList.toggle("hide");
     result.classList.toggle("hide");
