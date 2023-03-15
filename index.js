@@ -106,14 +106,14 @@ function isWinner(results){
     return results[0].beats.includes(results[1].name)
 }
 
-// playAgain.addEventListener('click',function(){
-//     gameSection.classList.toggle("hide");
-//     result.classList.toggle("hide");
-//     choices.forEach((choice)=>{
-//         choice.addEventListener('click',()=>{
-//             const choose = choice.classList[1];
-//             const choices = WAR.find((wars)=>wars.name===choose);
-//             move(choices)
-//         })
-//     })
-// })
+playAgain.addEventListener('click',function(){
+    gameSection.classList.toggle("hide");
+    result.classList.toggle("hide");
+    computerDivs.forEach((computerDiv)=>{
+        computerDiv.innerHTML = "";
+        computerDiv.classList.remove('shadow')
+        computerDiv.classList.add('computer')
+    })
+    resultText.innerHTML = ""
+    showResult.classList.toggle('hide')
+})

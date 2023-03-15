@@ -308,6 +308,10 @@ header > button{
     border: 1px solid green;
     mix-blend-mode: normal;
     box-shadow: 0 0 0 40px rgba(0, 0, 0, 0.05), 0 0 0 80px rgba(0,0,0,0.05), 0 0 0 130px rgba(0, 0, 0, 0.05);
+    animation: winner 1s ease forwards;
+}
+@keyframes winner{
+    from {opacity: 0.8;} to {opacity: 1;}
 }
 .pre-step-2-inner-circle > img{
     width: 142px;
