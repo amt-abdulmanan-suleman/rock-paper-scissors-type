@@ -219,6 +219,7 @@ header > button{
     align-items: center;
     column-gap: 72px;
     max-width: 1000px;
+    position: relative;
 }
 .picks{
     display: flex;
@@ -244,10 +245,12 @@ header > button{
     width: 220px;
     height: 131px;
     display: flex;
-    align-items: center;
     justify-content: center;
     flex-direction: column;
     row-gap: 16px;
+    align-self: stretch;
+    margin-top: 170px;
+    border: 1px solid green;
 }
 .result .result-text{
     font-style: normal;
@@ -300,7 +303,16 @@ header > button{
     border-radius: 50%;
     background: rgba(0, 0, 0, 0.1);
 }
-
+.shadow{
+    border-radius: 50%;
+    border: 1px solid green;
+    mix-blend-mode: normal;
+    box-shadow: 0 0 0 40px rgba(0, 0, 0, 0.05), 0 0 0 80px rgba(0,0,0,0.05), 0 0 0 130px rgba(0, 0, 0, 0.05);
+    animation: winner 1s ease forwards;
+}
+@keyframes winner{
+    from {opacity: 0.8;} to {opacity: 1;}
+}
 .pre-step-2-inner-circle > img{
     width: 142px;
     height: 142px;
@@ -309,6 +321,7 @@ header > button{
     background-color: #EB9F0E;
     box-shadow:0px 8px 3px #C76C1B;
 }
+
 .pre-step-2-circle-rock{
     background-color: #DB2E4D;
     box-shadow:0 8px 3px #9D1634;
@@ -483,6 +496,12 @@ button{
     }
     .rules-btn{
         margin-top: 245px;
+    }
+    .shadow{
+        box-shadow: 0 0 0 30px rgba(0, 0, 0, 0.05), 0 0 0 60px rgba(0,0,0,0.05), 0 0 0 100px rgba(0, 0, 0, 0.05);
+    }
+    .result{
+        margin-top:0;
     }
 }
 .hide{
