@@ -1,3 +1,5 @@
+let score = localStorage.getItem('score') || 0
+
 const ruleBtn = document.querySelector(".rules-btn");
 const closeBtn = document.querySelector(".close-btn");
 const rulesModal = document.querySelector('.rules');
@@ -8,7 +10,12 @@ const result = document.querySelector(".pre-step-2")
 const picks = document.querySelectorAll('.picks');
 const resultText = document.querySelector('.result-text')
 const showResult = document.querySelector('.result')
+const shadow = document.querySelectorAll('.shade')
+const playAgain = document.querySelector('.result-btn')
+const scoreText = document.querySelector('.score')
+scoreText.innerHTML = score
 
+console.log(score)
 const WAR = [
     {
         name: "scissors",
@@ -77,8 +84,16 @@ function winnerOrLoser(results){
         const aiWinner = isWinner(results.reverse());
         if(userWinner){
             resultText.innerHTML = 'You Win'
+            shadow[0].classList.toggle('shadow')
+            score++;
+            localStorage.setItem('score',score)
+            scoreText.innerHTML= score
         }else if(aiWinner){
             resultText.innerHTML = 'You Lose'
+            shadow[1].classList.toggle('shadow');
+            score--;
+            localStorage.setItem('score',score)
+            scoreText.innerHTML=score
         }else{
             resultText.innerHTML = 'Draw'
         }
@@ -90,3 +105,15 @@ function winnerOrLoser(results){
 function isWinner(results){
     return results[0].beats.includes(results[1].name)
 }
+
+// playAgain.addEventListener('click',function(){
+//     gameSection.classList.toggle("hide");
+//     result.classList.toggle("hide");
+//     choices.forEach((choice)=>{
+//         choice.addEventListener('click',()=>{
+//             const choose = choice.classList[1];
+//             const choices = WAR.find((wars)=>wars.name===choose);
+//             move(choices)
+//         })
+//     })
+// })
