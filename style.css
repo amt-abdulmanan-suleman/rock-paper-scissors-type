@@ -28,13 +28,12 @@ html,body{
     margin-bottom: 48px;
     gap: 384px;
 }
-.score-card > p {
+.logo {
     border: 1px solid hsl(0, 0%, 100%);
-    color: #FFFFFF;
-    font-weight:600;
-    font-size: 20px;
-    line-height: 20px;
+    background:url('./images/logo-bonus.svg');
     margin-left: 33px;
+    width: 100px;
+    height: 100px;
 }
 
 .score-box{
